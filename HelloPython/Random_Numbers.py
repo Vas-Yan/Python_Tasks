@@ -1,4 +1,5 @@
 # Написать генератор случайных чисел
-import random
-x = random.randint(1,100)
-print(x)
+def get_random (min_value, max_value):
+    import random
+    result = random.randint(min_value, max_value)
+    return result
