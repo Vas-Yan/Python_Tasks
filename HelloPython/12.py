@@ -1,9 +1,13 @@
-# Удалить вторую цифру трёхзначного числа
-def get_random (min_value, max_value):
-    import random
-    result = random.randint(min_value, max_value)
-    return result
-number = get_random(100,1000)
+# Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
+import Random_Numbers
 import math
-print(str("number = "), number)
-print(math.floor(number/100)*10 + number%10)
+number = Random_Numbers.get_random(10,100)
+print(number)
+def show_bigger_digit(number):
+    result = 0
+    if number%10 > math.floor(number/10):
+        result = number%10
+    else:
+        result = math.floor(number/10)
+    return result
+print(show_bigger_digit(number))
